@@ -1,0 +1,1 @@
+Opening up browser and we will making a request to http://localhost:8080/view which will render the template successfully. Next clicking on the button will fire a request to our local server populating our table.

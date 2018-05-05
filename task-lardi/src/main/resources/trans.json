@@ -1,0 +1,46 @@
+[
+	{  
+        "where":"Kiev",
+        "from":"Berlin",
+        "type":"audi"
+	},
+	
+	{
+		"where":"Lviv",
+        "from":"Krokov",
+        "type":"daf"
+	},
+	{  
+        "where":"Kiev",
+        "from":"Moscow",
+        "type":"man"
+	},
+	
+	{
+		"where":"Dnepr",
+        "from":"Kiev",
+        "type":"merc"
+	},
+	{  
+        "where":"Kiev",
+        "from":"Chernihiv",
+        "type":"volvo"
+	},
+	
+	{
+		"where":"Lviv",
+        "from":"Krokov",
+        "type":"daf"
+	},
+	{  
+        "where":"Kiev",
+        "from":"Berlin",
+        "type":"merc"
+	},
+	
+	{
+		"where":"Lviv",
+        "from":"Vena",
+        "type":"daf"
+	}
+]
