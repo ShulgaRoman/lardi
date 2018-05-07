@@ -19,13 +19,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Controller
 public class OrderController {
 
+	@Autowired
+	OrderJSONService  orderService;
+	
 	@RequestMapping(value = "/orders", 
 			produces = { MediaType.APPLICATION_JSON_VALUE }, 
 			method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity<List<Order>> getOrders() {
 
-		List<Order> orders = readJson();
+		List<Order> orders = orderService.readJson();
 
 		return new ResponseEntity<List<Order>>(orders, HttpStatus.OK);
 	}
@@ -36,17 +39,4 @@ public class OrderController {
 	public String viewOrders () {
 		return "order-listing";
 	}
-	
-	
-	public List<Order> readJson() {
-        ObjectMapper objectMapper = new ObjectMapper();
-        List<Order> orders = new ArrayList<>();
-		try {
-			orders = Arrays.asList(objectMapper.readValue(new File("src/main/resources/trans.json"), 
-					Order[].class));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-        return orders;
-    }
 }
